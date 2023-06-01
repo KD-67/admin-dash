@@ -137,6 +137,7 @@ button:hover {
     gap: 10px;
 }
 
+
 .menu-item img {
     width: 30px;
     flex: 1;
@@ -182,6 +183,7 @@ button:hover {
 .trending-acct:hover, 
 .announcement:hover {
     background-color: rgb(247, 238, 218);
+    cursor: pointer;
 }
 
 .content {
