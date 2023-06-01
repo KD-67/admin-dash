@@ -1,0 +1,40 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 1.75fr 1fr 10fr / 1fr 5fr 1.75fr;
+}
+
+nav {
+    border: 1px solid black;
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+.toolbar {
+    border: 1px solid black;
+    grid-area: 2 / 2 / 3 / 4;
+}
+
+.sidebar {
+    border: 1px solid black;
+    grid-area: 1 / 1 / 5 / 2;
+}
+
+.title1 {
+    border: 1px solid black;
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.title2 {
+    border: 1px solid black;
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.article1 {
+    border: 1px solid black;
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.article2 {
+    border: 1px solid black;
+    grid-area: 4 / 3 / 5 / 4;
+}
