@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     height: 100vh;
     display: grid;
@@ -7,11 +12,58 @@
 nav {
     border: 1px solid black;
     grid-area: 1 / 2 / 2 / 4;
+    display: grid;
+
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
+    align-self: center;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-item img {
+    width: 30px;
+}
+
+.search-icon, .searchbar, .alerts-icon, .nav-user-pic, .nav-name {
+    justify-self: center;
+}
+
+.search-icon img {
+    width: 30px;
+}
+
+.searchbar {
+    place-self: center stretch;
+}
+
+.searchbar input {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .toolbar {
     border: 1px solid black;
     grid-area: 2 / 2 / 3 / 4;
+}
+
+.toolbar ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.toolbar ul li {
+    list-style: none;
+    place-self: center;
+}
+
+.toolbar-pic {
+    width: 80px;
 }
 
 .sidebar {
