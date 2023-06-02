@@ -1,3 +1,15 @@
+:root {
+    --bgc: rgb(233, 240, 251);
+    --sidebar-clr: rgb(128, 159, 217);
+    --content-bgc: white;
+    --content-hover-clr: rgb(247, 238, 218);
+    --card-accent-clr: rgb(255, 200, 0);
+    --shadow-clr: rgb(172, 169, 169);
+    --logo-text-clr: white;
+    --btn-text-clr: white;
+    --btn-hover-clr: rgb(35, 91, 194);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,18 +17,18 @@
 }
 
 body{
-    background-color: rgb(233, 240, 251);
+    background-color: var(--bgc);
 }
 
 .container {
     height: 100vh;
     display: grid;
     grid-template: 1fr 1.75fr 1fr 10fr / 1fr 5fr 1.75fr;
-    gap: 15px;
+
 }
 
 nav {
-    background-color: white;
+    background-color: var(--content-bgc);
     grid-area: 1 / 2 / 2 / 4;
     display: grid;
 }
@@ -54,15 +66,15 @@ nav ul {
 }
 
 button {
-   background-color:rgb(128, 159, 217);
+   background-color: var(--sidebar-clr);
    border: none;
-   color: white;
+   color: var(--btn-text-clr);
    padding: 10px;
    border-radius: 10px;
 }
 
 button:hover {
-    background-color: rgb(35, 91, 194);
+    background-color: var(--btn-hover-clr);
     padding: 12px;
     cursor: pointer;
 }
@@ -79,25 +91,51 @@ button:hover {
 
 .toolbar {
     grid-area: 2 / 2 / 3 / 4;
-    background-color: white;
+    background-color: var(--content-bgc);
+    box-shadow: 0 5px 5px var(--shadow-clr);
+    z-index: 100;
+    padding: 5px 5%;
 }
 
 .toolbar ul {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-between;
 }
 
 .toolbar ul li {
     list-style: none;
-    place-self: center;
+}
+
+.toolbar-cat1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.toolbar-cat2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 .toolbar-pic {
     width: 80px;
 }
 
+.toolbar-btn {
+    flex: 1;
+}
+
 .sidebar {
-    background-color: rgb(128, 159, 217);
+    background-color: var(--sidebar-clr);
     grid-area: 1 / 1 / 5 / 2;
     display: grid;
     grid-template-rows: 1fr 10fr;
@@ -117,7 +155,7 @@ button:hover {
 
 .logo h1 {
     flex: 4;
-    color: white;
+    color: var(--logo-text-clr);
     font-weight: bold;
     font-style: italic;
 }
@@ -126,7 +164,7 @@ button:hover {
     height: 75%;
     display: grid;
     grid-template-rows: repeat(9, 1fr);
-    gap: 5px:
+    gap: 5px;
 }
 
 .menu-item {
@@ -147,21 +185,21 @@ button:hover {
 .menu-item a {
     flex: 5;
     text-decoration: none;
-    color: white;
+    color: var(--content-bgc);
     font-style: italic;
     font-size: 1.5rem;
 }
 
 .title {
     grid-area: 3 / 2 / 4 / 3;
-    background-color: rgb(233, 240, 251);
+    background-color: var(--bgc);
     display: flex;
     padding-left: 10%;
     align-items: flex-end;
 }
 
 .article1 {
-    background-color: rgb(233, 240, 251);
+    background-color: var(--bgc);
     padding: 25px;
     padding-bottom: 50px;
     grid-area: 4 / 2 / 5 / 3;
@@ -171,19 +209,19 @@ button:hover {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--content-bgc);
     border-radius: 10px;
     padding-right: 10px;
     display: grid;
     grid-template: 2.5fr 1fr / 1fr 22fr;
     overflow: hidden;
-    box-shadow: 0 0 10px rgb(129, 129, 129);
+    box-shadow: 0 0 10px var(--shadow-clr);
 }
 
 .card:hover,
 .trending-acct:hover, 
 .announcement:hover {
-    background-color: rgb(247, 238, 218);
+    background-color: var(--content-hover-clr);
     cursor: pointer;
 }
 
@@ -193,7 +231,7 @@ button:hover {
 }
 
 .yellow {
-    background-color: rgb(255, 200, 0);
+    background-color: var(--card-accent-clr);
 }
 
 .buttons {
@@ -208,11 +246,12 @@ button:hover {
 }
 
 .article2 {
-    background-color: rgb(233, 240, 251);
+    background-color: var(--bgc);
     grid-area: 3 / 3 / 5 / 4;
     display: grid;
     grid-template-rows: 1fr 5fr 1fr 5fr;
     justify-content: space-around;
+    padding-top: 12%;
 }
 
 .article2 ul li {
@@ -231,9 +270,9 @@ button:hover {
 }
 
 .announcement {
-    background-color: white;
+    background-color: var(--content-bgc);
     padding: 10px;
-    box-shadow: 0 0 10px rgb(129, 129, 129);
+    box-shadow: 0 0 10px var(--shadow-clr);
     border-radius: 10px;
 }
 
@@ -246,14 +285,14 @@ button:hover {
 
 .trending-accts-container ul li {
     list-style: none;
-    background-color: white;
+    background-color: var(--content-bgc)
 }
 
 .trending-acct {
     display: grid;
     grid-template-columns: 1fr 3fr;
     padding: 10px;
-    box-shadow: 0 0 10px rgb(129, 129, 129);
+    box-shadow: 0 0 10px var(--shadow-clr);
     border-radius: 10px;
 }
 
